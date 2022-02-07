@@ -5,7 +5,6 @@ const WATCHLIST = '/watchlist'
 
 module.exports = (app, models) => {
     app.get(END_POINT + WATCHLIST,
-        (req, res, next) => { checkToken(req, res, next) },
         (req, res) => {
             models.systemWatchlist.findAll()
             .then(
