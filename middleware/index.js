@@ -1,6 +1,6 @@
 const msgs = require('../router/account.messages')
 const jwt = require('jsonwebtoken');
-const jwtSecret = process.env.USRACCNT_JWT_SECRET;
+const jwtSecret = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhY2NvdW50cy5jbHViYmFoYW1hcy5maW5hbmNlIiwibmFtZSI6Ikx1Y2FzIE5hdG9saSIsImlhdCI6MTUxNjIzOTAyMn0.CeDih9NznUUNt7YNIYH_lzzpEO4iIMVOL9f9wRXhGRY';
 
 const middlewares = {
 
