@@ -1,7 +1,7 @@
 'use strict';
 
 const env = process.env;
-const jwtSecret = env.USRACCNT_JWT_SECRET;
+const jwtSecret = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhY2NvdW50cy5jbHViYmFoYW1hcy5maW5hbmNlIiwibmFtZSI6Ikx1Y2FzIE5hdG9saSIsImlhdCI6MTUxNjIzOTAyMn0.CeDih9NznUUNt7YNIYH_lzzpEO4iIMVOL9f9wRXhGRY';
 const END_POINT = '/v1/accounts'
 const credential = require('credential')
 const jwt = require('jsonwebtoken');
@@ -61,6 +61,7 @@ function findById(id, account) {
 }
 
 function userInfo(id, fullname) {
+  console.log("signing jwt")
   let token = jwt.sign(
     { id: id },
     jwtSecret,
