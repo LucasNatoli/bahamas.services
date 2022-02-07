@@ -61,7 +61,6 @@ function findById(id, account) {
 }
 
 function userInfo(id, fullname) {
-  console.log("signing jwt")
   let token = jwt.sign(
     { id: id },
     jwtSecret,
